@@ -1,0 +1,192 @@
+/* Scroll down to see what did i do to style calc */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4e3e8;
+  padding-top: 40px;
+}
+.calculator {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  border: 2px solid black;
+  box-shadow: 5px 5px 10px #fdfdfd, -5px -5px 10px #fff;
+  border-radius: 10px;
+}
+#_input {
+  width: 100%;
+  min-height: 60px;
+  text-align: right;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #111;
+  box-shadow: 2px 2px 10px #fff;
+  padding: 10px;
+  font-size: 30px;
+  grid-template-rows: minmax(50%, auto);
+  overflow-wrap: break-word;
+}
+.calc-button {
+  display: flex;
+  border-radius: 5px;
+  font-size: 30px;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in;
+}
+
+/* Active means when you press down that button the following property will be asigned */
+.calc-button:active {
+  box-shadow: inset 1px 1px 2px #babeec, inset -1px -1px 2px #fff;
+  font-weight: bold;
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 10px;
+  padding-top: 15px;
+  grid-gap: 8px;
+  text-align: center;
+}
+#result {
+  grid-row: span 3;
+}
+
+#clear {
+  background-color: red;
+}
+
+.calc-button:hover {
+  background-color: #1857df;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 1);
+}
+.clear:hover {
+  background-color: tomato;
+  color: #111;
+  box-shadow: 0px 60px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.operator {
+  background-color: #183981;
+}
+.operator:hover {
+  background-color: #183981;
+}
+@media only screen and (max-width: 375px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
+  }
+  .calculator-buttons {
+    display: grid;
+    grid-auto-rows: minmax(90px, auto);
+    grid-gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #result {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+/*  I tried grid but didn't work. */
+/* .grid_container{
+  display: grid;
+  grid-template-areas: 'myheader myheader myheader myheader'
+  'opr opr opr opr'
+  '. . . side'
+  '. . . side'
+  '. . . side';
+} */
+/* .header >input{
+  grid-area: myheader;
+}
+.operators > button{
+  grid-area: opr;
+}
+.result {
+  grid-area: side;
+} */
+
+/* .row1 >*{
+  display: inline-block;
+}
+.row2 >*{
+  display: inline-block;
+}
+.row3 >*{
+  display: inline-block;
+}
+.row1>*,.row2>*,.row3 >*{
+  padding: 9px;
+  border: 1px solid black;
+}
+
+.result{
+  height: 90px;
+  
+  
+}
+.operators >*{
+  padding: 10px;
+} */
+
+/* ---------------------------------------------------------------------------- */
+
+/* here i used flex property but it doesn't worked for me. */
+/* .flex-box {
+  width: 30em;
+}
+.flex-box > .row {
+  border: 1px solid rgb(214, 189, 189);
+  display:flex;
+  flex-wrap: wrap;
+  flex: 0 1 60%;
+}
+.row1 > input {
+  /* width: 100%; */
+/* border: 1px solid black;
+  flex-grow: 1;
+}
+
+.row2 > * {
+  padding: 20px;
+  border: 1px solid black;s
+  flex-grow: 1;
+} */
+/* .row3 > div {
+  padding: 20px;
+  border: 1px solid black;
+  flex: 0;
+}
+.row4 > div {
+  padding: 20px;
+  border: 1px solid black;
+  flex: 0;
+}
+.row5 > div {
+  padding: 20px;
+  border: 1px solid black;
+  flex: 0;
+} */
+/* .numbers>.row{
+    display: flex;
+}
+.numbers > .row > div {
+  padding: 20px;
+  border: 1px solid black;
+  flex: 0;
+  cursor: pointer;
+}
+.btn-equal{
+    line-height: 200px;
+    display: flex;
+    flex-direction: column;
+} 
+*/
